@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class Addition {
 	public static void main(String[] args) {
+	/* Added try and catch, so even if user enters for example, 92 and then Hello, error won't come. 
+	Instead, "Enter a number, not a letter/word" will be displayed in the command line */
+		try{	
 		// Scanner to read user input from command line
 		Scanner readNumber = new Scanner(System.in);
 		System.out.println("Enter Two Numbers and press Enter after each input:):");
@@ -16,5 +19,9 @@ public class Addition {
 		// Arithmetic Operation
 		add3 = add1 + add2;
 		System.out.println("Sum = " + add3);
+		}
+		catch(Exception word){
+			System.out.println("Enter a number, not letter/word");
+		}
 	}
 }
